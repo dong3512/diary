@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.dong.diary.dao.MemberDao">
+  
+  <resultMap id ="memberMap" type="member">
+    <id column="mno" property="no"/>
+    <result column="name" property="name"/> 
+    <result column="email" property="email"/>
+    <result column="tel" property="tel"/>
+    <result column="password" property="password"/>
+    <result column="address" property="address"/>
+    <result column="state" property="state"/>
+    <result column="photo" property="photo"/>
+  </resultMap>
+  
+  <insert id="insert" parameterType="member">
+    insert into member (name,email,tel,password,address,photo)
+    values({name}#{name}, #{email}, #{tel}, password(#{password}),#{address}, #{photo})
+    </insert>
+    
+    <select id="findByKeyword" resultMap="memberMap" parameterType="string">
+      select
+      mno,
+      name,
+      email,
+      tel,
+      address,
+      photo
+    from member
+    <where>
+      <if test="keyword != null and keyword != ''">
+       name like concat('%', #{keyword}, '%')
+       email like concat('%', #{keyword}, '%')
+      or tel like concat('%', #{keyword}, '%')
+      </if>
+    </where>
+    where
+     state=1
+    order by mno asc 
+    </select>
+    
+    <select id="findByNo" resultMap="memberMap" parameterType="int">
+    select
+      mno,
+      name,
+      email,
+      tel,
+      address,
+      photo
+    from member
+    where mno = #{value}
+    and state=1
+    </select>
+    
+    <update id="update" parameterType="member">
+    update member set
+      tel=#{tel},
+      address=#{address},
+      password=password(#{password}),
+      photo=#{photo}
+      where mno=#{no}      
+    </update>
+    
+    
+    <delete id="delete" parameterType="int">
+    update member set
+    state=0
+      where mno=#{no}
+    </delete>
+    
+    </mapper>
+    
