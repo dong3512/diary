@@ -1,10 +1,12 @@
 package com.dong.diary.service.impl;
 
 import java.util.List;
+import org.springframework.stereotype.Service;
 import com.dong.diary.dao.MemberDao;
 import com.dong.diary.domain.Member;
 import com.dong.diary.service.MemberService;
 
+@Service
 public class DefaultMemberService implements MemberService{
 
   MemberDao memberDao;

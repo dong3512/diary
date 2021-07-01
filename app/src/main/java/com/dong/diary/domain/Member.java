@@ -1,7 +1,7 @@
 package com.dong.diary.domain;
 
 public class Member {
-  private int mno;
+  private int no;
   private String name;
   private String email;
   private String tel;
@@ -10,12 +10,18 @@ public class Member {
   private boolean state;
   private String photo;
 
-  public int getMno() {
-    return mno;
+  @Override
+  public String toString() {
+    return "Member [no=" + no + ", name=" + name + ", email=" + email + ", tel=" + tel
+        + ", address=" + address + ", state=" + state + ", photo=" + photo + "]";
   }
 
-  public void setMno(int mno) {
-    this.mno = mno;
+  public int getNo() {
+    return no;
+  }
+
+  public void setNo(int no) {
+    this.no = no;
   }
 
   public String getName() {
@@ -73,12 +79,5 @@ public class Member {
   public void setPhoto(String photo) {
     this.photo = photo;
   }
-
-  @Override
-  public String toString() {
-    return "Member [mno=" + mno + ", name=" + name + ", tel=" + tel + ", password=" + password
-        + ", address=" + address + ", state=" + state + ", photo=" + photo + "]";
-  }
-
 
 }

@@ -33,12 +33,12 @@ public class MemberController {
   }
 
   @PostMapping("add")
-  public String add(Member m, Part profileFile) throws Exception {
+  public String add(Member m, Part photoFile) throws Exception {
     String uploadDir = sc.getRealPath("/upload");
 
-    if (profileFile.getSize() > 0) {
+    if (photoFile.getSize() > 0) {
       String filename = UUID.randomUUID().toString();
-      profileFile.write(uploadDir + "/" + filename);
+      photoFile.write(uploadDir + "/" + filename);
       m.setPhoto(filename);
 
       Thumbnails.of(uploadDir + "/" + filename)
