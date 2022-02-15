@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f7bca732-8ed1-4725-858d-c73ae5bd002d" name="Default Changelist" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dong/diary/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dong/diary/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dong/diary/repository/MemoryMemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dong/diary/repository/MemoryMemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dong/diary/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dong/diary/service/MemberService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -63,7 +64,7 @@
       <recent name="C:\Users\82104\git\diary\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MemberServiceTest">
+  <component name="RunManager" selected="Application.DiaryAppllication (1)">
     <configuration name="DiaryAppllication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dong.diary.DiaryAppllication" />
       <module name="diary.main" />
@@ -138,8 +139,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MemberServiceTest" />
         <item itemvalue="Application.DiaryAppllication (1)" />
+        <item itemvalue="JUnit.MemberServiceTest" />
         <item itemvalue="JUnit.All in diary" />
         <item itemvalue="JUnit.MemoryMemberRepositoryTest" />
         <item itemvalue="Gradle.diary [test]" />
