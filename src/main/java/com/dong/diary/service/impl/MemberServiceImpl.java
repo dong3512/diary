@@ -12,22 +12,28 @@ public class MemberServiceImpl implements MemberService {
 
     @Autowired
     MemberMapper memberMapper;
+
     @Override
     public int add(Member member) throws Exception {
         return memberMapper.insert(member);
     }
 
+    @Override
     public List<Member> list() throws Exception {
         return memberMapper.allList();
     }
 
+    @Override
     public Member selectSingle(Member member) {
         return memberMapper.selectOne(member);
     }
 
+    @Override
     public Member Update(Member member) {
         return memberMapper.update(member);
     }
+
+    @Override
     public Member Delete(Member member) {
         return memberMapper.delete(member);
     }

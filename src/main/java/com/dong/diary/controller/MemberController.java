@@ -7,40 +7,52 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.ServletContext;
 import java.util.List;
 
 @Controller
+@RequestMapping("/member/")
 public class MemberController {
 
-    private final MemberService memberService;
+    @Autowired
+    MemberService memberService;
+    @Autowired
+    ServletContext sc;
 
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
 
-    @GetMapping(value = "/members/new")
+    @GetMapping("add")
     public String creatForm() {
-        return "members/createMemberForm";
+        return "createMemberForm";
     }
 
-    @PostMapping(value = "/members/new")
-    public String create(MemberForm form) {
+    @PostMapping("add")
+    public String add(Member member) throws Exception {
 
-        Member member = new Member();
-        member.setName(form.getName());
+        Member m = new Member();
+        m.setId(member.getId());
+        m.setPassword(member.getName());
+        m.setName(member.getName());
+        memberService.add(m);
 
-        memberService.join(member);
-
-
-        return "redirect:/";
+        return "redirect:list";
     }
 
-    @GetMapping(value = "/members")
-    public String list(Model model) {
-        List<Member> members = memberService.findMembers();
-        model.addAttribute("members", members);
-        return "members/memberList";
+    @GetMapping("list")
+    public String list( Model model) throws Exception{
+        List<Member> list = memberService.list();
+        model.addAttribute("list", list);
+        return "memberList";
+    }
+
+    @GetMapping("detail")
+    public void selectSingle(Member member ,  Model model) throws Exception {
+        Member m = memberService.selectSingle(member);
+        model.addAttribute("member", m);
     }
 }
