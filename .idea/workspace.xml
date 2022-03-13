@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7bca732-8ed1-4725-858d-c73ae5bd002d" name="Default Changelist" comment=".">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dong/diary/config/MyBatisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dong/diary/config/MyBatisConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +81,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="diary [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="diary [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -90,7 +92,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="test" />
+            <option value="dependencies" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -141,10 +143,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.DiaryAppllication (1)" />
+        <item itemvalue="Gradle.diary [dependencies]" />
         <item itemvalue="JUnit.MemberServiceTest" />
         <item itemvalue="JUnit.All in diary" />
         <item itemvalue="JUnit.MemoryMemberRepositoryTest" />
-        <item itemvalue="Gradle.diary [test]" />
       </list>
     </recent_temporary>
   </component>
