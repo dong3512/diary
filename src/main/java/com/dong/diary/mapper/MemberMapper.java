@@ -1,7 +1,6 @@
 package com.dong.diary.mapper;
 
 import com.dong.diary.domain.Member;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
