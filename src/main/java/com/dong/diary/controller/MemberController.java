@@ -13,7 +13,7 @@ import javax.servlet.ServletContext;
 import java.util.List;
 
 @Controller
-@RequestMapping("/member")
+@RequestMapping("/member/")
 public class MemberController {
 
     @Autowired
@@ -36,14 +36,14 @@ public class MemberController {
 
         Member m = new Member();
         m.setId(member.getId());
-        m.setPassword(member.getName());
+        m.setPassword(member.getPassword());
         m.setName(member.getName());
         memberService.add(m);
 
         return "redirect:list";
     }
 
-    @GetMapping("/list")
+    @GetMapping("list")
     public String list( Model model) throws Exception{
         List<Member> list = memberService.list();
         model.addAttribute("list", list);

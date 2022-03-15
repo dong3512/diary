@@ -9,7 +9,7 @@ import java.util.List;
 public interface MemberMapper {
 
     @Options(useGeneratedKeys = true, keyProperty = "no")
-    @Insert("INSERT INTO member(id, password) VALUES(#{id}, #{password} )")
+    @Insert("INSERT INTO member(id, password , name) VALUES(#{id}, #{password} ,#{name} )")
     int insert(Member member) throws Exception;
     @Select("SELECT * FROM member")
     List<Member> allList() throws Exception;
