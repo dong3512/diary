@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7bca732-8ed1-4725-858d-c73ae5bd002d" name="Default Changelist" comment=".">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/createMemberForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/createMemberForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dong/diary/config/MyBatisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dong/diary/config/MyBatisConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
