@@ -20,7 +20,6 @@ public class MyBatisConfig {
         return sqlSessionFactory.getObject();
     }
 
-
     @Bean
     public SqlSessionTemplate sqlSession(SqlSessionFactory sqlSessionFactory) {
         return new SqlSessionTemplate(sqlSessionFactory);
