@@ -19,7 +19,6 @@ public class MyBatisConfig {
         sqlSessionFactory.setTypeAliasesPackage("com.dong.diary.mapper");
         return sqlSessionFactory.getObject();
     }
-
     
     @Bean
     public SqlSessionTemplate sqlSession(SqlSessionFactory sqlSessionFactory) {
